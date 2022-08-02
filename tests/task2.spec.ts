@@ -16,7 +16,7 @@ test ('Validate that at least 30 Todays Trending Coupons are displayed on the ma
     
     await expect(trendingCouponsCount).toBeGreaterThanOrEqual(30);
 
-    for (let i = 0; i < trendingCouponsCount; i++) {
+    for (let i = 1; i < trendingCouponsCount; i++) {
         await expect(await mainPage.singleTrendingCoupon(i, isMobile)).toBeVisible();
     }
     console.log('Total count of Today\'s Trending Coupons:', trendingCouponsCount);
