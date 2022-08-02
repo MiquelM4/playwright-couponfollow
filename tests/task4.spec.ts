@@ -9,7 +9,7 @@ test('Validate that the Top Deal swiper is automatically changed every 5 seconds
     const cashbackPage = new CouponFollowCashbackPage(page);
     const utils = new Utils();
 
-    cashbackPage.goTo();
+    await cashbackPage.goTo();
 
     await expect(cashbackPage.topCashbackOffersSwiper).toBeVisible();
     const topCashbackOffersCount:number = await utils.getNumberOfUniqueValues(cashbackPage.topCashbackCoupons);
